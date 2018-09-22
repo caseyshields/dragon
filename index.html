@@ -7,18 +7,23 @@
   <link href="site.css" rel="stylesheet" />
 </head>
 <body>
+  <header>
+    <h1> Western Dragon </h1>
+    <img src="WesternDragon.jpg" width="50%">
+    <h4> <a href="https://github.com/caseyshields/dragon">Casey Shields<a href="https://github.com/caseyshields/dragon"></a> </h4>
+    <span>Uniaxial 22.5 degree origami model. Use Ctrl+ or Ctrl- to comfortably size the diagrams.</span>
+  </header>
+<main>
   <div id="list">
       <diagram v-bind:name="'dragon'" v-bind:stages="stages"></diagram>
   </div>
-  
+</main>
   <script src="https://unpkg.com/vue"></script>
   <script src="diagram.js"></script>
   <script type="text/javascript">
     let dragon_vue = new Vue({
       el: "#list",
       data: {
-        title: "Vue Component Examples",
-        query: '',
         stages: []
       },
       created: function() {
